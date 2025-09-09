@@ -154,10 +154,14 @@ body {
 }
 
 @media (max-width: 768px) {
+    .navbar-layout {
+        position: fixed;
+    }
+
     .navbar-layout.active {
         width: calc(100% - 200px);
     }
-    
+
     .navbar-conn {
         padding: 15px 30px;
     }

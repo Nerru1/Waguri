@@ -19,6 +19,7 @@
 
 .page1 {
     background: url("hero.jpg");
+    background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center -110px;
@@ -192,7 +193,7 @@
 }
 
 .galeri-foto-conn { 
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     max-width: 1200px;
     padding: 0 20px;
     margin: 0 auto;
@@ -207,12 +208,12 @@
     justify-content: center;
     align-items: center;
     padding: 10px;
-    max-width: fit-content;
-    height: fit-content;
 }
 
 .foto img {
-    height: 270px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 .foto1, .foto2, .foto3, .foto4 {
@@ -267,7 +268,7 @@
     color: #ffffff;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .hero {
         height: 110vh;
     }
@@ -313,6 +314,7 @@
 
     /* Page 3 */
     .galeri-judul {
+        gap: 20px;
         font-size: 50px;
     }
     
@@ -330,7 +332,7 @@
     }
 
     .foto img {
-        height: 170px;
+        height: 140px;
     }
 
     .galeri-btn-conn button {

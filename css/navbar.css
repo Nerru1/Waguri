@@ -153,13 +153,9 @@ body {
     height: 30px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .navbar-layout {
-        position: fixed;
-    }
-
-    .navbar-layout.active {
-        width: calc(100% - 200px);
+        height: 65px;
     }
 
     .navbar-conn {
@@ -172,7 +168,9 @@ body {
 
     .oth-navbar-layout {
         display: flex;
-        width: 200px;
+        position: relative;
+        margin-top: 64px;
+        width: 45%;
         height: 100%;
         position: fixed;
         z-index: 1;
@@ -185,7 +183,7 @@ body {
 
     .oth-navbar-layout.scrolled {
         display: flex;
-        width: 200px;
+        width: 45%;
         height: 100%;
         position: fixed;
         z-index: 1;

@@ -15,7 +15,7 @@
 }
 
 .hero-head-judul {
-    position: absolute;
+    position: relative;
     text-align: center;
     justify-content: center;
     width: 100%;
@@ -39,18 +39,19 @@
 .hero-foot {
     display: flex;
     justify-content: center;
+    align-items: center;
     height: 40vh;
     background-color: rgb(255, 255, 255);
 }
 
 .hero-card-conn {
-    top: 67%;
     display: grid;
-    position: absolute;
-    grid-template-columns: 25% 25% 25% 25%;
+    position: relative;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     justify-content: center;
     gap: 20px;
-    width: 160vh;
+    width: 90%;
+    align-items: start;
 }
 
 .card {
@@ -58,11 +59,11 @@
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    padding: 20px;
     background: linear-gradient(90deg, #ff7a9241, white, white);
     background-size: 200% 100%;
     border-radius: 10px;
     box-shadow: 0 0 18px 2px rgba(0, 0, 0, 0.156);
+    padding: 40px;
     color: #ff7a92;
 }
 
@@ -75,7 +76,7 @@
     font-weight: bold;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .hero-head-judul {
         top: 40%;
     }
@@ -89,12 +90,11 @@
     }
 
     .hero-card-conn {
-        grid-template-columns: 25% 25%;
-        width: 100vh;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .hero-card-conn {
-        top: 64%;
+        top: 30%;
     }
 }
 

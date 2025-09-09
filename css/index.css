@@ -72,6 +72,8 @@
 /* Tentang */
 
 .page2 {
+    display: grid;
+    flex-direction: column;
     background: linear-gradient(90deg, #ff7a921a, #ff002f27, #ff7a921a);
     background-size: 200% 100%;
     justify-content: center;
@@ -80,7 +82,7 @@
 
 .tentang-judul-conn {
     position: relative;
-    top: 6%;
+    top: 19%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -90,7 +92,6 @@
 .tentang-judul {
     color: #ff7a92;
     display: flex;
-    position: relative;
     gap: 130px;
     font-size: 90px;
     font-weight: bold;
@@ -101,8 +102,7 @@
 
 .tentang-conn {
     display: grid;
-    position: absolute;
-    top: 30%;
+    position: relative;
     grid-template-columns: 280px 1fr;
     gap: 60px;
     width: 150vh;
@@ -282,8 +282,9 @@
     }
 
     .tentang-judul {
-        text-align: center;
+        position: relative;
         font-size: 50px;
+        top: 10%;
     }
     
     .tentang-conn {
@@ -292,8 +293,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        position: absolute;
-        transform: scale(0.7);
     }
 
     .tentang-cerita {

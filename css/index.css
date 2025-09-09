@@ -1,0 +1,291 @@
+*::-webkit-scrollbar {
+    display: none;
+    font-family: 'poppins';
+}
+
+.hero {
+    display: flex;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    z-index: 0;
+    filter: blur(8px);
+    transition: 1s all;
+}
+
+.hero.visible {
+    filter: blur(0px);
+}
+
+.page1 {
+    background: url("hero.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center -110px;
+    justify-content: center;
+}
+
+.page1::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: #250c107b;
+}
+
+.page1 button {
+    padding: 15px;
+    background-color: #ff7a9225;
+    border: 3px solid #ff7a92;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    color: #ffccd5;
+    transition: all 0.3s;
+}
+
+.page1 button:hover {
+    background: linear-gradient(90deg, #ff7a92, #ff617e, #ff7a92);
+    background-size: 200% 100%;
+    color: white;
+    box-shadow: 0 2px 6px 0 #ff7a92;
+    animation: bg 1s linear infinite;
+    transform: scale(1.1);
+}
+
+.container-hero {
+    position: absolute;
+    top: 35%;
+    text-align: center;
+    color: #ff7a92;
+}
+
+.judul-hero  {
+    font-weight: bold;
+    font-size: 70px;
+}
+
+.subjudul-hero {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+/* Tentang */
+
+.page2 {
+    background: linear-gradient(90deg, #ff7a921a, #ff002f27, #ff7a921a);
+    background-size: 200% 100%;
+    justify-content: center;
+    animation: bg 3s linear infinite;
+}
+
+.tentang-judul-conn {
+    position: relative;
+    top: 6%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    max-height: 100px;
+}
+
+.tentang-judul {
+    color: #ff7a92;
+    display: flex;
+    position: relative;
+    gap: 130px;
+    font-size: 90px;
+    font-weight: bold;
+    animation: font 2s steps(4) infinite;
+}
+
+.tentang-judul-left { transform: rotate(-3deg); } .tentang-judul-right { transform: rotate(3deg); }
+
+.tentang-conn {
+    display: grid;
+    position: absolute;
+    top: 30%;
+    grid-template-columns: 280px 1fr;
+    gap: 60px;
+    width: 150vh;
+    align-items: start;
+    transition: all 0.3s;
+}
+
+.tentang-foto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, #ff7a92, #ff96a9, #ff7a92);
+    background-size: 200% 100%;
+    padding: 6px;
+    border-radius: 10px;
+    width: 300px;
+    animation: bg 3s linear infinite;
+    box-shadow: 0 2px 6px 0 #ff7a92;
+    transform: rotate(3deg);
+}
+
+.tentang-foto img {
+    transform: rotate(-3deg);
+}
+
+.foto-tentang {
+    position: relative;
+    border-radius: 10px;
+    height: 300px;
+}
+
+.tentang-cerita {
+    padding: 5px;
+    font-size: 17.5px;
+    text-shadow: 2px 2px 8px #ff7a92;
+    color: #ff7a92;
+}
+
+.tentang-cerita button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #ff7a92;
+    box-shadow: 0 2px 6px 0 #ff7a92;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s;
+    outline: 2px solid transparent;
+}
+
+.tentang-cerita button:hover {
+    transform: scale(1.1);
+    background-color: white;
+    outline: 2px solid #ff7a92;
+    color: #ff7a92;
+}
+
+/* Galeri */
+
+.page3 {
+    justify-content: center;
+    background-color: #ff7a92;
+}
+
+.galeri-judul-conn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    top: 6%;
+    max-height: 100px;
+}
+
+.galeri-judul {
+    display: flex;
+    position: relative;
+    color: white;
+    font-weight: bold;
+    font-size: 90px;
+    gap: 60px;
+}
+
+.galeri-foto-conn { 
+    transition: all 0.3s;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    position: absolute;
+    width: 160vh;
+    top: 27%;
+    gap: 20px;
+}
+
+.foto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    max-width: fit-content;
+}
+
+.foto img {
+    height: 270px;
+}
+
+.foto1, .foto2, .foto3, .foto4 {
+    box-shadow: 0 0 6px 2px #ffccd58c;
+    background-color: #ffccd5;
+}
+
+.galeri-btn-conn {
+    display: flex;
+    top: 72%;
+    position: absolute;
+    width: 100%;
+    max-height: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+.galeri-btn-conn button {
+    position: relative;
+    font-weight: bold;
+    color: #ff7a92;
+    background-color: #ffffff;
+    box-shadow: 0 0 18px 2px rgba(255, 255, 255, 0.438);
+    cursor: pointer;
+    border-radius: 30px;
+    border: none;
+    font-size: 24px;
+    padding: 15px 30px;
+    outline: 4px solid transparent;
+    transition: all 0.3s;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.galeri-btn-conn button::after {
+    content: "";
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #ff7a92;
+    transition: width 1s;
+    z-index: -1; 
+}
+
+.galeri-btn-conn button:hover::after {
+    width: 100%;
+}
+
+.galeri-btn-conn button:hover {
+    outline: 4px solid white;
+    color: #ffffff;
+}
+
+@keyframes bg {
+    0% {
+        background-position: 0% 50%;
+    }
+    25% {
+        background-position: 50% 100%;
+    }
+    50% {
+        background-position: 100% 150%;
+    }
+    75% {
+        background-position: 150% 200%;
+    } 
+    100% {
+        background-position: 200% 0%;
+    }
+}
+
+@keyframes font {
+    0%   { font-family: Arial, sans-serif; }
+    16%  { font-family: "Courier New", monospace; }
+    32%  { font-family: Georgia, serif; }
+    48%  { font-family: "Comic Sans MS", cursive; }
+    64%  { font-family: Verdana, sans-serif; }
+    80%  { font-family: Tahoma, sans-serif; }
+    100% { font-family: Arial, sans-serif; }
+}

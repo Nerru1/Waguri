@@ -1,0 +1,117 @@
+.hero {
+    position: relative;
+    height: 100vh;
+    background-color: gray;
+}
+
+.hero-head {
+    display: flex;
+    position: relative;
+    background: linear-gradient(90deg, #ff7a92, #ff9aac, #ffaebd, #ff9aac,#ff7a92);
+    background-size: 200% 100%;
+    height: 60vh;
+    overflow: hidden;
+    animation: bg 2s linear infinite;
+}
+
+.hero-head-judul {
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    top: 30%;
+    color: white;
+}
+
+.hero-head-judul img {
+    height: 100px;
+}
+
+.head-judul {
+    font-weight: bold;
+    font-size: 70px;
+}
+
+.head-subjudul {
+    font-size: 20px;
+}
+
+.hero-foot {
+    display: flex;
+    justify-content: center;
+    height: 40vh;
+    background-color: rgb(255, 255, 255);
+}
+
+.hero-card-conn {
+    top: 67%;
+    display: grid;
+    position: absolute;
+    grid-template-columns: 25% 25% 25% 25%;
+    justify-content: center;
+    gap: 20px;
+    width: 160vh;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
+    background: linear-gradient(90deg, #ff7a9241, white, white);
+    background-size: 200% 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 18px 2px rgba(0, 0, 0, 0.156);
+    color: #ff7a92;
+}
+
+.head-card {
+    font-weight: bold;
+    font-size: 60px;
+}
+
+.subhead-card {
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .hero-head-judul {
+        top: 40%;
+    }
+
+    .head-judul {
+        font-size: 35px;
+    }
+
+    .head-subjudul {
+        font-size: 10px;
+    }
+
+    .hero-card-conn {
+        grid-template-columns: 25% 25%;
+        width: 100vh;
+    }
+
+    .hero-card-conn {
+        top: 64%;
+    }
+}
+
+@keyframes bg {
+    0% {
+        background-position: 0% 50%;
+    }
+    25% {
+        background-position: 50% 100%;
+    }
+    50% {
+        background-position: 100% 150%;
+    }
+    75% {
+        background-position: 150% 200%;
+    } 
+    100% {
+        background-position: 200% 0%;
+    }
+}

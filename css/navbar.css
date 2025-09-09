@@ -1,0 +1,253 @@
+body {
+    margin: 0;
+    font-family: 'poppins';
+}
+
+.navbar-layout {
+    backdrop-filter: blur(2px);
+    background-color: rgba(0, 0, 0, 0.047);
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.149);
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    transition: all 0.3s;
+}
+
+.navbar-layout.scrolled {
+    background-color: rgba(255, 255, 255, 0.897);
+    backdrop-filter: blur(4px);
+}
+
+.navbar-conn {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 150px;
+}
+
+.topleft {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.topright {
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.judul {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff7a92;
+}
+
+.song {
+    font-family: 'poppins';
+    position: relative;
+    color: #ff7a92;
+    border: none;
+    border-radius: 10px;
+    outline: 3px solid #ff7a92;
+    background-color: transparent;
+    padding: 5px 15px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 1s all;
+    margin-left: 10px;
+    z-index: 0;
+}
+
+.song::after {
+    content: "";
+    width: 0;
+    height: 100%;
+    position: absolute;
+    background-color: #ff7a92;
+    left: 0;
+    bottom: 0;
+    transition: width 1s;
+    z-index: -1;
+}
+
+.song:hover {
+    color: white;
+}
+
+.song:hover::after {
+    width: 100%;
+}
+
+.song.on {
+    box-shadow: 0 0 18px 2px #ff7a92;
+    color: white;
+    background: linear-gradient(90deg, #ff7a92, #ffabbb, #ff7a92);
+    background-size: 200% 100%;
+    animation: bg 2s linear infinite;
+}
+
+.topright span {
+    position: relative;
+}
+
+.topright span::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -1px;
+    background-color: #ff7a92;
+    transition: width 0.2s;
+}
+
+.topright a {
+    position: relative;
+    padding: 5px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.navbar-layout.scrolled .topright a {
+    color: rgba(0, 0, 0, 0.482);
+}
+
+.navbar-layout.scrolled .topright a:hover {
+    color: #ff7a92;
+}
+
+.topright a:hover span::after {
+    width: 100%;
+}
+
+.topright a:hover {
+    color: #ff7a92;
+}
+
+.topright .beranda {
+    font-weight: bold;
+    color: #ff7a92;
+}
+
+.navbar-layout.scrolled .topright .beranda {
+    color: #ff7a92;
+} 
+
+.oth-navbar-layout {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.hamburger img {
+    height: 30px;
+}
+
+@media (max-width: 768px) {
+    .navbar-layout.active {
+        width: calc(100% - 200px);
+    }
+    
+    .navbar-conn {
+        padding: 15px 30px;
+    }
+
+    .topright a {
+        display: none;
+    }
+
+    .oth-navbar-layout {
+        display: flex;
+        width: 200px;
+        height: 100%;
+        position: fixed;
+        z-index: 1;
+        backdrop-filter: blur(2px);
+        background-color: rgba(0, 0, 0, 0.047);
+        right: 0;
+        transform: translateX(100%);
+        transition: all 0.3s;
+    }
+
+    .oth-navbar-layout.scrolled {
+        display: flex;
+        width: 200px;
+        height: 100%;
+        position: fixed;
+        z-index: 1;
+        background-color: rgba(255, 255, 255, 0.897);
+        right: 0;
+        transform: translateX(100%);
+    }
+
+    .oth-navbar-conn {
+        top: 1.5%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .oth-navbar-conn a {
+        transition: all 0.3s;
+        padding: 10px;
+        width: 100%;
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+    }
+
+    .oth-navbar-layout.active {
+        transform: translateX(0);
+    }
+
+    .hamburger {
+        margin-left: 10px;
+        display: flex;
+        cursor: pointer;
+    }
+
+    .oth-navbar-layout.scrolled .oth-navbar-conn a {
+        color: rgba(0, 0, 0, 0.482);
+    }
+
+    .oth-navbar-conn .beranda {
+        font-weight: bold;
+        color: #ff7a92;
+    }
+
+    .oth-navbar-layout.active .oth-navbar-conn .beranda {
+        color: #ff7a92;
+    }
+
+    .oth-navbar-conn a:hover {
+        color: #ff7a92;
+    }
+}
+
+@keyframes bg {
+    0% {
+        background-position: 0% 50%;
+    }
+    25% {
+        background-position: 50% 100%;
+    }
+    50% {
+        background-position: 100% 150%;
+    }
+    75% {
+        background-position: 150% 200%;
+    } 
+    100% {
+        background-position: 200% 0%;
+    }
+}

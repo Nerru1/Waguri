@@ -1,0 +1,79 @@
+body {
+    display: flex;
+    background: linear-gradient(90deg, #ff7a92, #ff9fb1, #ff7a92);
+    background-size: 200% 100%;
+    font-family: 'poppins';
+    animation: bg 2s linear infinite;
+}
+
+.galeri-layout {
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: center;
+}
+
+.galeri-judul {
+    color: white;
+    font-size: 50px;
+    position: relative;
+    margin-top: 20px;
+    text-shadow: 4px 0px #ff4e6f;
+}
+
+.galeri-foto {
+    margin-top: 180px;
+    display: grid;
+    position: absolute;
+    grid-template-columns: 25% 25% 25% 25%;
+    padding: 70px 0;
+}
+
+.galeri-foto a {
+    padding: 8px;
+}
+
+.galeri-foto img {
+    border: 10px solid #ffccd5;
+    box-shadow: 0 0 18px 2px #ff4e6eac;
+    aspect-ratio: 3/3;
+    display: flex;
+    justify-content: center;
+    height: 310px;
+}
+
+@media (max-width: 768px) {
+    .galeri-layout {
+        display: flex;
+        justify-content: center;
+    }
+
+    .galeri-judul {
+        font-size: 25px;
+        margin-top: 130px;
+    }
+
+    .galeri-foto {
+        margin-top: 0;
+        grid-template-columns: 50% 50%;
+        transform: scale(0.7);
+    }
+}
+
+@keyframes bg {
+    0% {
+        background-position: 0% 50%;
+    }
+    25% {
+        background-position: 50% 100%;
+    }
+    50% {
+        background-position: 100% 150%;
+    }
+    75% {
+        background-position: 150% 200%;
+    } 
+    100% {
+        background-position: 200% 0%;
+    }
+}

@@ -76,7 +76,7 @@
     font-weight: bold;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 990px) {
     .hero-head-judul {
         top: 40%;
     }
@@ -90,11 +90,26 @@
     }
 
     .hero-card-conn {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .card {
+    }
+
+    .head-card {
+        font-size: 40px;
     }
 
     .hero-card-conn {
+        padding: 20px 0;
         top: 30%;
+    }
+}
+
+@media (max-width: 468px) {
+    .hero-card-conn {
+        padding: 20px 0;
+        top: 90%;
     }
 }
 

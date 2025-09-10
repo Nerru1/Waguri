@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <div class="navbar-layout">
@@ -37,21 +38,21 @@
 
     <div class="hero page1">
         <div class="container-hero">
-            <span class="judul-hero">Slamet datang di</span><br>
+            <span class="judul-hero">Selamat datang di</span><br>
             <span class="subjudul-hero">My kisah kami</span><br><br>
             <button class="hero-btn"  onclick="window.location.href='tentang_kita.html'">Tentang Kami</button>
         </div>
     </div>
 
     <div class="hero page2">
-            <div class="tentang-judul-conn">
+            <div class="tentang-judul-conn" data-aos="fade-up">
                 <div class="tentang-judul">
                     <span class="tentang-judul-left">Tentang</span>
                     <span class="tentang-judul-right">Dia</span>
                 </div>
             </div>
 
-            <div class="tentang-conn">
+            <div class="tentang-conn" data-aos="zoom-in-up">
                 <div class="tentang-foto">
                     <img src="css/kaorukowaguri.jpg" class="foto-tentang">
                 </div>
@@ -65,23 +66,27 @@
 
     <div class="hero page3">
         <div class="galeri-judul-conn">
-            <div class="galeri-judul">
+            <div class="galeri-judul" data-aos="fade-up">
                 <span>Galeri</span>
                 <span>Dia</span>
             </div>
         </div>
 
         <div class="galeri-foto-conn">
-            <div class="foto foto1"><img src="img/sayangku.jpg"></div>
-            <div class="foto foto2"><img src="img/galeriwaguri2.jpg"></div>
-            <div class="foto foto3"><img src="img/galeriwaguri3.jpg"></div>
-            <div class="foto foto4"><img src="img/galeriwaguri4.jpg"></div>
+            <div class="foto foto1" data-aos="fade-right"><img src="img/sayangku.jpg"></div>
+            <div class="foto foto2" data-aos="fade-right"><img src="img/galeriwaguri2.jpg"></div>
+            <div class="foto foto3" data-aos="fade-left"><img src="img/galeriwaguri3.jpg"></div>
+            <div class="foto foto4" data-aos="fade-left"><img src="img/galeriwaguri4.jpg"></div>
         </div>
 
-        <div class="galeri-btn-conn">
+        <div class="galeri-btn-conn" data-aos="fade-down">
             <button>Lihat Galeri</button>
         </div>
     </div>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+    AOS.init();
+    </script>
 
     <script src="navbar.js"></script>
     <script src="sound.js"></script>
@@ -103,5 +108,4 @@
     </script>
 
 </body>
-
 </html>

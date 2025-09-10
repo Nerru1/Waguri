@@ -268,7 +268,7 @@
     color: #ffffff;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 990px) {
     .hero {
         height: 110vh;
     }

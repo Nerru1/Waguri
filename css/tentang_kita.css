@@ -76,7 +76,7 @@
     font-weight: bold;
 }
 
-@media (max-width: 990px) {
+@media (max-width: 1200px) {
     .hero-head-judul {
         top: 40%;
     }

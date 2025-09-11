@@ -38,8 +38,8 @@ body {
 
 .galeri-foto a {
     box-shadow: 0 0 10px 6px rgba(0, 0, 0, 0.204);
-    padding: 10px;
-    height: 310px;
+    padding: 10px 10px 20%;
+    max-height: 310px;
     background-color: white;
     transition: all 0.3s;
 }
